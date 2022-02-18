@@ -1,0 +1,28 @@
+---
+layout: 'base.njk'
+title: 'All Recipes'
+---
+
+<section class="all-recipes">
+    <div class="global-container recipe-container">
+            <div class="row">
+            {%- for post in collections.post | reverse -%}
+                        <div class="col-lg-4 col-md-6 col-sm-6 allRecipes-col">
+                            <div class="card allRecipes-card">
+                                <img class="allRecipes-img" src="{{ post.data.image }}"  alt="{{ post.data.imageAlt }}">
+                                <div class="card-body cbody-allRecipes">
+                                    <h4 class="card-title ">{{ post.data.title }}</h4>
+                                    <div class="card-flex">
+                                        <p class="card-desc cardAllRecipes-author">{{ post.data.author}}</p>
+                                        <p class="card-desc cardAllRecipes-text">{{ post.data.date | postDate }} </p>
+                                        <p class="card-desc cardAllRecipes-text">{{ post.data.difficulty }} </p>
+                                    </div>
+                                        <a href="{{ post.url }}" class="btn btn-hero-1 card-recipe-btn">To the Recipe</a>
+                                </div>
+                            </div>                          
+                        </div>
+            {%- endfor -%}
+                </div>
+        </div>
+    </div>
+</section>
