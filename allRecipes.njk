@@ -3,7 +3,7 @@ layout: 'base.njk'
 title: 'All Recipes'
 ---
 
-<section class="all-recipes">
+{# <section class="all-recipes">
     <div class="global-container recipe-container">
             <div class="row">
             {%- for post in collections.post | reverse -%}
@@ -25,4 +25,24 @@ title: 'All Recipes'
                 </div>
         </div>
     </div>
+</section> #}
+
+<section id="all-recipes">
+        <div class="global-container">
+          <div class="card-wrapper">
+          {%- for post in collections.post | reverse -%}
+          <a href="{{ post.url }}">
+            <div class="sticky-card card-shadow">
+              <div class="card-description">
+                <h5>{{ post.data.title }}</h5>
+                <p>{{ post.data.description }}</p>
+              </div>
+              <div class="card-image">
+                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+              </div>
+            </div>
+          </a>
+          {%- endfor -%}
+          </div>
+        </div>
 </section>

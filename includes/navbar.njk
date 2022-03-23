@@ -1,16 +1,23 @@
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/#">Navbar</a>
-          <button id="toggle-btn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <a class="navbar-brand" href="/">home</a>
+          <button id="toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <div id="burger-container">
+                <label for="check" >
+                  <input type="checkbox" id="check"/>
+                  <span class="nav-line"></span>
+                  <span class="nav-line"></span>
+                  <span class="nav-line"></span>
+                </label>
+              </div>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav align-items-center">
-              <a class="nav-link active" href="/#recent">Recent</a>
-              <a class="nav-link active" href="/#how-to">How To</a>
-              <a class="nav-link active" href="/#about">About</a>
-              <a class="nav-link active" href="/allRecipes">All Recipes</a>
+            <div id="navbar-nav" class="navbar-nav align-items-center">
+              <a class="nav-link active" href="/allRecipes">all recipes</a>
+              <a class="nav-link active" href="#about">about</a>
             </div>
           </div>
         </div>
+        <script>
+        </script>
       </nav>

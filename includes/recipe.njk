@@ -5,32 +5,24 @@ title:  'title'
 
 
 <section class="recipe">
-    <div class="recipe-container global-container">
-        <div class="recipe-hero">
-            <div class="recipe-header">
-                <div class="row align-items-center hero-row">
-                    <div class="col-lg-5 recipe-caption-col">
+    <div class="global-container ">
+        <div class="recipe-row">
+                  <div class="recipe-caption-col">
                             <div class="overcaptions">
-                                <p>{{ author }}</p> <br>
                                 <p>{{ date | postDate }}</p>
-                                <p>-</p>
                                 <p>{{ difficulty }}</p>
                             </div>
-                            <h2 class="recipe-title">{{ title }}</h2>
+                            <h3 class="recipe-title">{{ title }}</h3>
                             <p class="recipe-descriptions">{{ description }} </p>
                     </div>
-                    <div class="col-lg-7 recipe-image-col"><img class="recipe_img" src="{{ image }}" alt="{{ imageAlt }}">
+                    <div class="recipe-image-col"><img class="recipe-img" src="{{ image }}" alt="{{ imageAlt }}">
                     </div>
-                </div>
-                <ul>
-                </ul>
             </div>
         </div>
 
         <div class="divider"></div>
 
         <div class="content-container global-container">
-            <h2 class="titles"> Ingredients and Instructions </h2>
             {{ content | safe }}
         </div>
     </div>
