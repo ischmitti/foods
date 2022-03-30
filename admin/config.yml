@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main #
+media_folder: "_site/posts/images"
+public_folder: "posts"
+collections: 
+  - name: "blog"
+  label: "Blog"
+  folder: "src/posts"
+  create: true
+  slug: "{{slug}}"
+  flieds:
+  - { label: "Title", name: "title", widget: "string"}
+  - { label: "Description", name: "description", widget: "string" }
+  - { label: "Featured Image", name: "image", widget: "image" }
+  - { label: "Image caption", name: "imageAlt", widget: "string" }
+  - { label: "Difficulty", name: "difficulty", widget: "string" }
+  - { label: "Time", name: "time", widget: "string" }
+  - { label: "Body", name: "body", widget: "markdown" }
+  - { label: "Tags", name: "tags", widget: "list", default: ["post"]}
+  - { label: "Layout", name: "layout", widget: "hidden", default: "recipe.njk"}
+  - { label: "Color", name: "color", widget: "string", default: "#ffffff"}

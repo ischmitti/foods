@@ -4,10 +4,14 @@ window.onload = () => {
 
     function navbarScroll(){
         if(window.location.pathname != "/"){
-            let appendix= document.getElementById("navbar")
+        let appendix= document.getElementById("navbar")
         appendix.classList.remove("navbar-dark")
         appendix.classList.add("navbar-light")
         appendix.style.color="white !important"
+        const navline = document.getElementsByClassName('nav-line')
+        navline[0].style.backgroundColor ="black"
+        navline[1].style.backgroundColor ="black"
+        navline[2].style.backgroundColor ="black"
         }else{
             document.addEventListener('scroll',function(e){
                 if(window.scrollY > window.innerHeight){
@@ -71,16 +75,18 @@ window.onload = () => {
     }
 
     function moveImage(){
-        let _1vh = Math.round(window.innerHeight / 100)
-        let a = document.body.clientHeight
-        let b =document.getElementById('about').clientHeight
-        let c = document.getElementById('footer').clientHeight
-        let d = a - (b + c) -500
-        window.addEventListener('scroll', () => {
-            if(scrollY >= d){
-                document.getElementById('moveImage').style.transform = ' translateY(' + ((d - scrollY) *0.2 ) + 'px)'
-            }
-        })
+        if(window.location.pathname ==="/"){
+            let _1vh = Math.round(window.innerHeight / 100)
+            let a = document.body.clientHeight
+            let b =document.getElementById('about').clientHeight
+            let c = document.getElementById('footer').clientHeight
+            let d = a - (b + c) -500
+            window.addEventListener('scroll', () => {
+                if(scrollY >= d){
+                    document.getElementById('moveImage').style.transform = ' translateY(' + ((d - scrollY) *0.25 ) + 'px)'
+                }
+            })
+        }
     }
 
     navbarScroll()
