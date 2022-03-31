@@ -80,10 +80,10 @@ window.onload = () => {
             let a = document.body.clientHeight
             let b =document.getElementById('about').clientHeight
             let c = document.getElementById('footer').clientHeight
-            let d = a - (b + c) -500
+            let d = a - (b + c) -750
             window.addEventListener('scroll', () => {
                 if(scrollY >= d){
-                    document.getElementById('moveImage').style.transform = ' translateY(' + ((d - scrollY) *0.25 ) + 'px)'
+                    document.getElementById('moveImage').style.transform = ' translateY(' + ((d - scrollY) *0.133 ) + 'px)'
                 }
             })
         }
