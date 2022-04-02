@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget('./static/js/')
     eleventyConfig.addPassthroughCopy('./static/images/')
     eleventyConfig.addWatchTarget('./static/images/')
+    eleventyConfig.addPassthroughCopy('./posts/images/')
+    eleventyConfig.addWatchTarget('./posts/images/')
     eleventyConfig.addPassthroughCopy('./admin/')
     eleventyConfig.addWatchTarget('./admin/')
     const { DateTime } = require("luxon");

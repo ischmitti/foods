@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soup up is a blog about noodle soups. Most of the recipes are quick and easy to prepare.">
     <link rel="shortcut icon" href="static/images/logo.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="static/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -24,8 +25,82 @@
     <footer id="footer">
         {% include 'footer.njk' %}
     </footer>
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.js"></script>
     <script type="module" src="/static/js/index.js"></script>
     <script>
+      window.addEventListener('load', function(){
+        const cc = initCookieConsent();
+
+        cc.run({
+            current_lang : 'en',
+            theme_css : 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.css',
+            onAccept : function(){
+            },
+            onChange: function(){
+            },
+            delay: 500,
+            coookie_expiration: 182,
+            cookie_path: "/",
+            page_scripts: true,
+            languages : {
+                en : {
+                    consent_modal : {
+                        title :  "Yes, we use cookies.",
+                        description :  'We minimized third party cookies as much as possible. We use cookies to enhance your browsing experience and analyze our traffic.',
+                        primary_btn: {
+                            text: 'Accept All',
+                            role: 'accept_all'  //'accept_selected' or 'accept_all'
+                        },
+                        secondary_btn: {
+                            text : 'Settings',
+                            role : 'settings'   //'settings' or 'accept_necessary'
+                        },
+                    },
+                    settings_modal : {
+                        title : 'Cookie settings',
+                        save_settings_btn : "Save settings",
+                        accept_all_btn : "Accept all",
+                        reject_all_btn : "Reject all",
+                        close_btn_label: "Close",
+                        layout: 'box',                 // box/bar
+                  // position: 'left',           // left/right
+                        transition: 'slide',    
+                        blocks : [
+                            {
+                                title : "Cookie usage",
+                                description: 'We use cookies to enhance your browsing experience and analyze our traffic'
+                            },{
+                                title : "Necessary cookies",
+                                description: 'Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.',
+                                toggle : {
+                                    value : 'necessary',
+                                    enabled : true,
+                                    readonly: true
+                                }
+                            },{
+                                title : "Analytics cookies",
+                                description: 'Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.',
+                                toggle : {
+                                    value : 'analytics',
+                                    enabled : false,
+                                    readonly: false
+                                }
+                            },
+                            {
+                                title : "Marketing cookies",
+                                description: 'Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.',
+                                toggle : {
+                                    value : 'marketing',
+                                    enabled : false,
+                                    readonly: false
+                                }
+                            },
+                        ]
+                    }
+                }
+            }
+        });
+    });
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {

@@ -1,6 +1,6 @@
 ---
 layout: 'base.njk'
-title: 'All Recipes'
+title: 'Soup Up - Place to be for all recipes'
 ---
 
 <section id="all-recipes">
@@ -8,9 +8,9 @@ title: 'All Recipes'
           <div class="card-wrapper">
           {%- for post in collections.post | reverse -%}
           <a href="{{ post.url }}">
-            <div class="sticky-card card-shadow" stlye="background-color; {{post.data.color}}">
+            <div class="sticky-card card-shadow" style="background-color:#{{post.data.color}}">
               <div class="card-description">
-                <h5>{{ post.data.title }}</h5>
+                <h4>{{ post.data.title }}</h4>
                 <p>{{ post.data.description }}</p>
               </div>
               <div class="card-image">

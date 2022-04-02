@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /allRecipes
+Disallow: /admin
+Disallow: /legalnotice
+Disallow: /privacy
+
+Sitemap: http://www.soupup.de/sitemap.xml

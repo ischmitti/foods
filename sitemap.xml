@@ -1,0 +1,33 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://www.soupup.de/</loc>
+<lastmod>2022-04-02T16:12:59+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://www.soupup.de/allrecipes/</loc>
+<lastmod>2022-04-02T16:12:59+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.soupup.de/posts/example/</loc>
+<lastmod>2022-04-02T16:12:59+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.soupup.de/posts/example-4th/</loc>
+<lastmod>2022-04-02T16:12:59+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.soupup.de/posts/example-3d/</loc>
+<lastmod>2022-04-02T16:12:59+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.soupup.de/posts/example-2nd/</loc>
+<lastmod>2022-04-02T16:12:59+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+</urlset>
